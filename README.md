@@ -23,11 +23,16 @@ Create a production build with:
 npm run build
 ```
 
-The output is written to `dist/`.
+The output is written to `docs/`.
 
 ## Deployment
 
-Pushes to `main` trigger the GitHub Pages workflow in `.github/workflows/deploy.yml`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
+The checked-in `docs/` production build is published from `main` by GitHub
+Pages. After changing the site, run `npm run build`, commit the updated build,
+and push `main`.
+
+The workflow in `.github/workflows/deploy.yml` is retained as an optional manual
+deployment path for accounts with GitHub Actions enabled.
 
 ## Design notes
 
