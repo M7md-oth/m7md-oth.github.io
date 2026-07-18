@@ -19,65 +19,63 @@ export const projects: Project[] = [
     detail: 'Authentication · Role-based flows · Checkout',
   },
   {
-    title: 'School Management System',
+    title: 'Developer Portfolio',
     number: '02',
     description:
-      'An Android application connecting registrars, teachers, and students through role-specific academic workflows.',
-    technologies: ['Java', 'Android', 'REST API'],
-    repository: 'https://github.com/M7md-oth/Mobile-school-management-system',
-    detail: 'Schedules · Assignments · Marks',
+      'A responsive React portfolio engineered as a fast, accessible product surface with automated production builds.',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    repository: 'https://github.com/M7md-oth/m7md-oth.github.io',
+    detail: 'Responsive UI · Accessibility · Deployment',
   },
   {
-    title: 'News Headline Classification',
+    title: 'Gym Equipment Rental',
     number: '03',
     description:
-      'A machine-learning study of text classification, from headline preprocessing through model training and evaluation.',
-    technologies: ['Python', 'Jupyter', 'Machine Learning'],
-    repository:
-      'https://github.com/M7md-oth/Ai-02-news-headline-classification',
-    detail: 'NLP · Classification · Evaluation',
+      'A native commerce flow covering product discovery, availability filters, cart quantities, checkout, and local order history.',
+    technologies: ['Java', 'Android', 'Gson', 'Local Storage'],
+    repository: 'https://github.com/M7md-oth/Mobile-gym-rental-app',
+    detail: 'Catalog · Cart · Checkout · Orders',
   },
   {
-    title: 'Socket Programming',
+    title: 'School Management System',
     number: '04',
     description:
-      'Two Java networking exercises: a bilingual HTTP server and a TCP client-server application built on raw sockets.',
-    technologies: ['Java', 'TCP/IP', 'HTTP'],
-    repository:
-      'https://github.com/M7md-oth/Computer-networks-socket-programming',
-    detail: 'Sockets · Protocols · Client/server',
+      'A role-based Android client connecting registrars, teachers, and students through academic service workflows.',
+    technologies: ['Java', 'Android', 'REST API'],
+    repository: 'https://github.com/M7md-oth/Mobile-school-management-system',
+    detail: 'Role-based UI · REST · Data workflows',
   },
 ]
 
 export const skillGroups = [
   {
-    label: 'Languages',
-    skills: ['Java', 'Python', 'PHP', 'SQL', 'C', 'Assembly'],
+    label: 'Frontend',
+    skills: ['React', 'TypeScript', 'Tailwind CSS', 'HTML & CSS'],
   },
   {
-    label: 'Application',
-    skills: ['Android', 'HTML & CSS', 'REST APIs', 'Responsive UI'],
+    label: 'Backend',
+    skills: ['PHP', 'Java', 'REST APIs', 'Authentication & sessions'],
   },
   {
-    label: 'Data',
-    skills: ['MySQL', 'Data analysis', 'Machine learning', 'Jupyter'],
+    label: 'Commerce',
+    skills: ['Product catalogs', 'Cart & checkout', 'Order workflows', 'Role-based access'],
   },
   {
-    label: 'Engineering',
-    skills: ['Git', 'Algorithms', 'Data structures', 'Software testing'],
+    label: 'Data & delivery',
+    skills: ['MySQL', 'SQL', 'Git', 'Vite', 'GitHub Pages', 'Testing'],
   },
 ]
 
 export const journey = [
   {
     year: 'Now',
-    title: 'Building complete product workflows',
-    text: 'Developing web and mobile applications with a stronger focus on architecture, usability, and maintainable delivery.',
+    title: 'React and digital commerce',
+    text: 'Focusing on responsive React interfaces and the catalog, cart, checkout, authentication, and order flows behind commerce products.',
   },
   {
     year: '2025',
-    title: 'Applied software engineering',
-    text: 'Built role-based Android systems, a PHP marketplace, and client-server networking projects.',
+    title: 'End-to-end product workflows',
+    text: 'Built a PHP marketplace, an Android rental journey, and role-based service applications backed by structured data.',
   },
   {
     year: 'Foundation',

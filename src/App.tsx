@@ -113,17 +113,17 @@ export default function App() {
             <div className="hero-copy">
               <p className="availability">
                 <span aria-hidden="true" />
-                Software developer · Palestine
+                Full-stack developer · React & commerce
               </p>
               <h1>
-                Building useful software
+                Building full-stack products
                 <br />
-                <em>with solid foundations.</em>
+                <em>for real customer journeys.</em>
               </h1>
               <p className="hero-lede">
                 I&apos;m Mohammed Othman, a Computer Science student at Birzeit
-                University. I build web, Android, and data-driven projects with
-                a practical approach to engineering.
+                University. I focus on React interfaces and the backend,
+                database, and transaction workflows behind digital commerce.
               </p>
               <div className="hero-actions">
                 <a className="button button-primary" href="#work">
@@ -138,7 +138,7 @@ export default function App() {
             </div>
             <aside className="hero-note" aria-label="Current focus">
               <span className="note-label">Current focus</span>
-              <p>Full-stack fundamentals, dependable interfaces, and software that is clear to use and maintain.</p>
+              <p>React and TypeScript interfaces, e-commerce architecture, and dependable backend workflows.</p>
               <a href="mailto:mohammedoth1232@gmail.com">
                 Contact me
                 <ArrowUpRight size={16} />
@@ -154,18 +154,19 @@ export default function App() {
         <section className="section about" id="about">
           <SectionHeading index="01" title="About" />
           <div className="about-grid">
-            <h2>I learn by building systems end to end.</h2>
+            <h2>I build around the complete customer journey.</h2>
             <div className="about-copy">
               <p>
-                My work spans web applications, Android development, machine
-                learning, networking, and lower-level programming. That range
-                helps me see software as a complete system—not only a screen or
-                an isolated algorithm.
+                My marketplace and rental projects cover the practical parts of
+                commerce software: product discovery, authentication, roles,
+                carts, checkout, and order management. I approach those flows
+                as one connected system rather than isolated screens.
               </p>
               <p>
-                I value straightforward architecture, meaningful naming, and
-                interfaces that respect the person using them. Each project is
-                an opportunity to improve the code and the decisions behind it.
+                I&apos;m currently applying that foundation to modern React and
+                TypeScript interfaces. I value straightforward architecture,
+                clear product states, and experiences that remain reliable from
+                the first interaction through completion.
               </p>
             </div>
           </div>
@@ -192,7 +193,7 @@ export default function App() {
           <SectionHeading
             index="03"
             title="Selected work"
-            description="Projects that represent how I approach application logic, data, and user workflows."
+            description="Commerce and product projects spanning React UI, catalogs, authentication, checkout, orders, and service workflows."
           />
           <div className="projects-grid">
             {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
@@ -207,7 +208,7 @@ export default function App() {
           <SectionHeading
             index="04"
             title="Journey"
-            description="A practical path through computer science, one working project at a time."
+            description="A path from computer science fundamentals to complete commerce and service products."
           />
           <ol className="timeline">
             {journey.map((item) => (
@@ -227,7 +228,7 @@ export default function App() {
           <div className="contact-grid">
             <h2>Have a project or opportunity in mind?</h2>
             <div className="contact-action">
-              <p>I&apos;m open to thoughtful conversations about software, collaboration, and early-career opportunities.</p>
+              <p>I&apos;m open to React, full-stack, and e-commerce projects, collaboration, and early-career opportunities.</p>
               <a className="button button-light" href="mailto:mohammedoth1232@gmail.com">
                 Start a conversation
                 <ArrowUpRight />
@@ -235,7 +236,7 @@ export default function App() {
             </div>
           </div>
           <div className="contact-footer">
-            <p>Mohammed Othman · Software Developer</p>
+            <p>Mohammed Othman · Full-stack Developer</p>
             <div className="social-links">
               <a href="mailto:mohammedoth1232@gmail.com" aria-label="Email Mohammed"><Mail /></a>
               <a href="https://www.linkedin.com/in/mohammed-othman-18aa44324" target="_blank" rel="noreferrer" aria-label="Mohammed on LinkedIn"><Linkedin /></a>

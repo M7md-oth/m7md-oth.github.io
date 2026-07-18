@@ -1,6 +1,7 @@
 # Mohammed Othman — Developer Portfolio
 
-Personal portfolio for [Mohammed Othman](https://github.com/M7md-oth), a Computer Science student and software developer working across web, Android, machine learning, and software engineering.
+Personal portfolio for [Mohammed Othman](https://github.com/M7md-oth), a
+full-stack developer focused on React interfaces and e-commerce systems.
 
 ## Stack
 
