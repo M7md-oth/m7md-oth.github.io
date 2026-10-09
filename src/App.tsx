@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { journey, projects, skillGroups } from './data'
 import {
-  ArrowDown,
   ArrowUpRight,
   Github,
   Linkedin,
@@ -10,8 +9,9 @@ import {
 
 const links = [
   ['About', '#about'],
+  ['Skills', '#skills'],
   ['Work', '#work'],
-  ['Journey', '#journey'],
+  ['Experience', '#experience'],
 ] as const
 
 function Header() {
@@ -46,7 +46,7 @@ function Header() {
           </a>
         ))}
         <a className="nav-contact" href="#contact" onClick={() => setOpen(false)}>
-          Let&apos;s talk
+          Contact
           <ArrowUpRight size={15} />
         </a>
       </nav>
@@ -77,14 +77,16 @@ function SectionHeading({
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   return (
     <article className="project-card">
-      <div className="project-topline">
-        <span className="project-number">{project.number}</span>
-        <span>{project.detail}</span>
-      </div>
+      <p className="project-tag">{project.tag}</p>
       <div className="project-body">
         <h3>{project.title}</h3>
         <p>{project.description}</p>
       </div>
+      <ul className="project-details" aria-label="Project highlights">
+        {project.detail.map((line) => (
+          <li key={line}>{line}</li>
+        ))}
+      </ul>
       <div className="project-footer">
         <ul aria-label="Technologies used">
           {project.technologies.map((technology) => (
@@ -109,73 +111,72 @@ export default function App() {
       <Header />
       <main id="main">
         <section className="hero" id="top">
-          <div className="hero-grid">
-            <div className="hero-copy">
-              <p className="availability">
-                <span aria-hidden="true" />
-                Full-stack developer · React & commerce
-              </p>
-              <h1>
-                Building full-stack products
-                <br />
-                <em>for real customer journeys.</em>
-              </h1>
-              <p className="hero-lede">
-                I&apos;m Mohammed Othman, a Computer Science student at Birzeit
-                University. I focus on React interfaces and the backend,
-                database, and transaction workflows behind digital commerce.
-              </p>
-              <div className="hero-actions">
-                <a className="button button-primary" href="#work">
-                  View selected work
-                  <ArrowDown size={17} />
-                </a>
-                <a className="button button-secondary" href="https://github.com/M7md-oth" target="_blank" rel="noreferrer">
-                  <Github />
-                  GitHub
-                </a>
-              </div>
-            </div>
-            <aside className="hero-note" aria-label="Current focus">
-              <span className="note-label">Current focus</span>
-              <p>React and TypeScript interfaces, e-commerce architecture, and dependable backend workflows.</p>
-              <a href="mailto:mohammedoth1232@gmail.com">
-                Contact me
-                <ArrowUpRight size={16} />
-              </a>
-            </aside>
+          <p className="hero-eyebrow">Full-stack React Developer</p>
+          <h1>
+            I build e-commerce and product systems
+            <br />
+            from interface to backend workflow.
+          </h1>
+          <p className="hero-lede">
+            Mohammed O. Abdallah — Ramallah, Palestine.
+            <br />
+            Computer Science graduate with hands-on experience in React, Node.js,
+            API integration, and customer-facing product flows.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#work">
+              View Projects
+            </a>
+            <a className="button button-secondary" href="https://github.com/M7md-oth" target="_blank" rel="noreferrer">
+              <Github />
+              GitHub
+            </a>
+            <a className="button button-secondary" href="mailto:mohammedoth1232@gmail.com">
+              <Mail />
+              Email
+            </a>
           </div>
-          <div className="hero-index" aria-hidden="true">
-            <span>01</span>
-            <span>Portfolio / 2026</span>
+          <div className="hero-stats" role="list" aria-label="Quick profile stats">
+            <div role="listitem">
+              <span>Focus</span>
+              <strong>React + E-Commerce</strong>
+            </div>
+            <div role="listitem">
+              <span>Location</span>
+              <strong>Ramallah, Palestine</strong>
+            </div>
+            <div role="listitem">
+              <span>Experience</span>
+              <strong>Frontend & Node.js Internship</strong>
+            </div>
           </div>
         </section>
 
         <section className="section about" id="about">
           <SectionHeading index="01" title="About" />
           <div className="about-grid">
-            <h2>I build around the complete customer journey.</h2>
+            <h2>Developer mindset, product-first execution.</h2>
             <div className="about-copy">
               <p>
-                My marketplace and rental projects cover the practical parts of
-                commerce software: product discovery, authentication, roles,
-                carts, checkout, and order management. I approach those flows
-                as one connected system rather than isolated screens.
+                I work on software the way users actually experience it:
+                discovery, signup, trust, purchase flow, and follow-up. That is
+                why I focus on e-commerce and service platforms where interface,
+                business logic, and data consistency all matter together.
               </p>
               <p>
-                I&apos;m currently applying that foundation to modern React and
-                TypeScript interfaces. I value straightforward architecture,
-                clear product states, and experiences that remain reliable from
-                the first interaction through completion.
+                My recent work includes marketplace systems, commerce-style
+                mobile journeys, and full-stack internship platform features
+                built with React and Node.js. I keep implementations simple,
+                readable, and maintainable.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="section skills" aria-labelledby="skills-title">
+        <section className="section skills" id="skills" aria-labelledby="skills-title">
           <div className="skills-title">
-            <p className="eyebrow"><span>02</span>Capabilities</p>
-            <h2 id="skills-title">Tools I work with</h2>
+            <p className="eyebrow"><span>02</span>Skills</p>
+            <h2 id="skills-title">Stack and capabilities</h2>
           </div>
           <div className="skill-list">
             {skillGroups.map((group) => (
@@ -192,8 +193,8 @@ export default function App() {
         <section className="section work" id="work">
           <SectionHeading
             index="03"
-            title="Selected work"
-            description="Commerce and product projects spanning React UI, catalogs, authentication, checkout, orders, and service workflows."
+            title="Selected projects"
+            description="Real projects focused on customer workflows, role-based logic, API integration, and product delivery."
           />
           <div className="projects-grid">
             {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
@@ -204,19 +205,20 @@ export default function App() {
           </a>
         </section>
 
-        <section className="section journey" id="journey">
+        <section className="section journey" id="experience">
           <SectionHeading
             index="04"
-            title="Journey"
-            description="A path from computer science fundamentals to complete commerce and service products."
+            title="Experience and leadership"
+            description="Internships and projects from my CV that shaped my full-stack direction."
           />
           <ol className="timeline">
             {journey.map((item) => (
-              <li key={item.year}>
-                <span className="timeline-year">{item.year}</span>
+              <li key={item.period + item.role}>
+                <span className="timeline-year">{item.period}</span>
                 <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
+                  <h3>{item.role}</h3>
+                  <p className="timeline-org">{item.organization}</p>
+                  <p>{item.summary}</p>
                 </div>
               </li>
             ))}
@@ -226,9 +228,12 @@ export default function App() {
         <section className="contact" id="contact">
           <p className="eyebrow"><span>05</span>Contact</p>
           <div className="contact-grid">
-            <h2>Have a project or opportunity in mind?</h2>
+            <h2>Let&apos;s build something useful.</h2>
             <div className="contact-action">
-              <p>I&apos;m open to React, full-stack, and e-commerce projects, collaboration, and early-career opportunities.</p>
+              <p>
+                I&apos;m open to React, full-stack, and e-commerce development
+                opportunities.
+              </p>
               <a className="button button-light" href="mailto:mohammedoth1232@gmail.com">
                 Start a conversation
                 <ArrowUpRight />
@@ -236,7 +241,7 @@ export default function App() {
             </div>
           </div>
           <div className="contact-footer">
-            <p>Mohammed Othman · Full-stack Developer</p>
+            <p>Mohammed O. Abdallah · Full-stack Developer</p>
             <div className="social-links">
               <a href="mailto:mohammedoth1232@gmail.com" aria-label="Email Mohammed"><Mail /></a>
               <a href="https://www.linkedin.com/in/mohammed-othman-18aa44324" target="_blank" rel="noreferrer" aria-label="Mohammed on LinkedIn"><Linkedin /></a>
