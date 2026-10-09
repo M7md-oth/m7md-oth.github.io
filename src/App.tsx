@@ -127,7 +127,7 @@ export default function App() {
               </p>
               <div className="hero-profile">
                 <img
-                  src="/profile.png"
+                  src="/profile.jpg"
                   alt="Mohammed Othman profile photo"
                   width={72}
                   height={72}
@@ -149,7 +149,7 @@ export default function App() {
               </div>
             </div>
             <aside className="hero-note" aria-label="Current focus">
-              <img src="/profile.png" alt="" className="hero-note-photo" />
+              <img src="/profile.jpg" alt="" className="hero-note-photo" />
               <span className="note-label">Current focus</span>
               <p>React and TypeScript interfaces, e-commerce architecture, and dependable backend workflows.</p>
               <a href="mailto:mohammedoth1232@gmail.com">
