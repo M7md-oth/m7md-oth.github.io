@@ -137,7 +137,7 @@ export default function App() {
               </div>
             </div>
             <aside className="hero-note" aria-label="Current focus">
-              <img src="/profile.png" alt="Mohammed Othman GitHub avatar" className="hero-note-photo" />
+              <img src="/profile.jpg" alt="Mohammed Othman profile photo" className="hero-note-photo" />
               <span className="note-label">Current focus</span>
               <p>React and TypeScript interfaces, e-commerce architecture, and dependable backend workflows.</p>
               <a href="mailto:mohammedoth1232@gmail.com">
