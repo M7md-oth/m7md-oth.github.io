@@ -1,127 +1,85 @@
 export type Project = {
   title: string
-  tag: string
+  number: string
   description: string
   technologies: string[]
   repository: string
-  detail: string[]
+  detail: string
 }
 
 export const projects: Project[] = [
   {
     title: 'Freelance Services Marketplace',
-    tag: 'E-Commerce',
+    number: '01',
     description:
-      'A full-stack marketplace with role-based user flows for service discovery, purchasing, and seller-side management.',
-    technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'Session auth'],
+      'A full-stack marketplace where clients discover services and freelancers manage listings, orders, and delivery workflows.',
+    technologies: ['PHP', 'MySQL', 'HTML', 'CSS'],
     repository:
       'https://github.com/M7md-oth/WEB-Freelancer-client-marketplace',
-    detail: [
-      'Role-based authentication and sessions',
-      'Cart, checkout, and order lifecycle',
-      'Freelancer service creation and edits',
-    ],
+    detail: 'Authentication · Role-based flows · Checkout',
   },
   {
-    title: 'UniConnect Platform',
-    tag: 'Full Stack',
+    title: 'Developer Portfolio',
+    number: '02',
     description:
-      'Graduation platform connecting students, companies, and universities to organize internships in one workflow.',
-    technologies: ['React', 'Node.js', 'Tailwind CSS', 'API integration'],
-    repository: 'https://github.com/M7md-oth',
-    detail: [
-      'Internship workflow between three user groups',
-      'OpenAI-powered assistant features',
-      'OTP verification flow using Resend API',
-    ],
-  },
-  {
-    title: 'Gym Rental App',
-    tag: 'Commerce App',
-    description:
-      'A mobile commerce journey with product catalog browsing, filtering, cart management, and checkout flow.',
-    technologies: ['Java', 'Android', 'Gson', 'Local persistence'],
-    repository: 'https://github.com/M7md-oth/Mobile-gym-rental-app',
-    detail: [
-      'Product listing, search, and availability filters',
-      'Cart quantities and total calculations',
-      'Checkout validation and local order history',
-    ],
-  },
-  {
-    title: 'Portfolio Site',
-    tag: 'React',
-    description:
-      'Developer portfolio built with React and TypeScript, designed and shipped with a clean, accessible, production-first setup.',
+      'A responsive React portfolio engineered as a fast, accessible product surface with automated production builds.',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     repository: 'https://github.com/M7md-oth/m7md-oth.github.io',
-    detail: [
-      'Responsive behavior across breakpoints',
-      'Semantic structure and keyboard accessibility',
-      'Static production deployment on GitHub Pages',
-    ],
+    detail: 'Responsive UI · Accessibility · Deployment',
+  },
+  {
+    title: 'Gym Equipment Rental',
+    number: '03',
+    description:
+      'A native commerce flow covering product discovery, availability filters, cart quantities, checkout, and local order history.',
+    technologies: ['Java', 'Android', 'Gson', 'Local Storage'],
+    repository: 'https://github.com/M7md-oth/Mobile-gym-rental-app',
+    detail: 'Catalog · Cart · Checkout · Orders',
+  },
+  {
+    title: 'School Management System',
+    number: '04',
+    description:
+      'A role-based Android client connecting registrars, teachers, and students through academic service workflows.',
+    technologies: ['Java', 'Android', 'REST API'],
+    repository: 'https://github.com/M7md-oth/Mobile-school-management-system',
+    detail: 'Role-based UI · REST · Data workflows',
   },
 ]
 
 export const skillGroups = [
   {
     label: 'Frontend',
-    skills: [
-      'React',
-      'TypeScript',
-      'JavaScript',
-      'Tailwind CSS',
-      'Vite',
-      'HTML',
-      'CSS',
-    ],
+    skills: ['React', 'TypeScript', 'Tailwind CSS', 'HTML & CSS'],
   },
   {
     label: 'Backend',
-    skills: [
-      'Node.js',
-      'Express',
-      'REST APIs',
-      'Authentication and sessions',
-      'PHP',
-    ],
+    skills: ['PHP', 'Java', 'REST APIs', 'Authentication & sessions'],
   },
   {
-    label: 'Databases',
-    skills: ['MySQL', 'SQL', 'Pagination', 'Data modeling'],
+    label: 'Commerce',
+    skills: ['Product catalogs', 'Cart & checkout', 'Order workflows', 'Role-based access'],
   },
   {
-    label: 'E-Commerce Workflows',
-    skills: [
-      'Product catalogs',
-      'Cart and checkout logic',
-      'Order workflows',
-      'Role-based access',
-      'Customer-facing UX',
-    ],
+    label: 'Data & delivery',
+    skills: ['MySQL', 'SQL', 'Git', 'Vite', 'GitHub Pages', 'Testing'],
   },
 ]
 
 export const journey = [
   {
-    period: 'Jul 2026 - Present',
-    role: 'Network Intern',
-    organization: 'Al-Zaytouna Company',
-    summary:
-      'Supporting network troubleshooting, day-to-day infrastructure tasks, and practical IT operations.',
+    year: 'Now',
+    title: 'React and digital commerce',
+    text: 'Focusing on responsive React interfaces and the catalog, cart, checkout, authentication, and order flows behind commerce products.',
   },
   {
-    period: 'Jul 2025 - Sep 2025',
-    role: 'Frontend and Node.js Intern',
-    organization: 'Spinal Tech',
-    summary:
-      'Built full-stack web features with React and Node.js, and integrated APIs across frontend and backend layers.',
+    year: '2025',
+    title: 'End-to-end product workflows',
+    text: 'Built a PHP marketplace, an Android rental journey, and role-based service applications backed by structured data.',
   },
   {
-    period: 'Projects',
-    role: 'Hult Prize and Product Development',
-    organization: 'NAMAA, Drift Guard, UniConnect',
-    summary:
-      'Contributed to product leadership, management, and software delivery in startup and academic project settings.',
+    year: 'Foundation',
+    title: 'Computer science fundamentals',
+    text: 'Practiced algorithms, data structures, low-level programming, data analysis, and software quality assurance.',
   },
 ]
