@@ -2,16 +2,16 @@
 
 :root {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  color: #171713;
-  background: #f2f0e9;
+  color: #152033;
+  background: #f7f8fb;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --ink: #171713;
-  --paper: #f2f0e9;
-  --muted: #706e66;
-  --rule: #cbc8bd;
-  --signal: #cf3f26;
-  --dark: #191a17;
+  --ink: #152033;
+  --paper: #f7f8fb;
+  --muted: #5a667c;
+  --rule: #d6deea;
+  --signal: #2e6fe2;
+  --dark: #0f172a;
 }
 
 * {
@@ -198,7 +198,7 @@ button {
   height: 7px;
   border-radius: 50%;
   background: var(--signal);
-  box-shadow: 0 0 0 4px rgba(207, 63, 38, 0.12);
+  box-shadow: 0 0 0 4px rgba(46, 111, 226, 0.15);
 }
 
 .hero h1 {
@@ -211,7 +211,7 @@ button {
 }
 
 .hero h1 em {
-  color: var(--signal);
+  color: #1f5fcc;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
 }
@@ -229,6 +229,32 @@ button {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 2rem;
+}
+
+.hero-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-profile img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #d3dced;
+  object-fit: cover;
+}
+
+.hero-profile strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.hero-profile p {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .button {
@@ -262,6 +288,16 @@ button {
 .hero-note {
   padding: 1.4rem 0 0;
   border-top: 2px solid var(--ink);
+}
+
+.hero-note-photo {
+  width: 56px;
+  height: 56px;
+  display: block;
+  margin-bottom: 0.9rem;
+  border-radius: 50%;
+  border: 2px solid #d3dced;
+  object-fit: cover;
 }
 
 .note-label {
@@ -508,12 +544,12 @@ button {
   width: 100%;
   max-width: none;
   padding: clamp(4rem, 8vw, 7rem) max(1.5rem, calc((100vw - 1240px) / 2));
-  color: #f1efe7;
+  color: #ecf2ff;
   background: var(--dark);
 }
 
 .contact .eyebrow span {
-  color: #ef654d;
+  color: #74a9ff;
 }
 
 .contact-grid {
@@ -530,14 +566,14 @@ button {
 
 .contact-action p {
   margin: 0 0 1.5rem;
-  color: #b7b6ae;
+  color: #b7c5df;
   line-height: 1.65;
 }
 
 .button-light {
   color: var(--dark);
-  background: #f1efe7;
-  border-color: #f1efe7;
+  background: #edf2fd;
+  border-color: #edf2fd;
 }
 
 .button-light:hover {
@@ -558,7 +594,7 @@ button {
 
 .contact-footer p {
   margin: 0;
-  color: #8f9089;
+  color: #8fa4c8;
   font-size: 0.72rem;
 }
 
@@ -572,13 +608,13 @@ button {
   height: 38px;
   display: grid;
   place-items: center;
-  border: 1px solid #4b4c46;
+  border: 1px solid #40557b;
   transition: border-color 150ms ease, background 150ms ease;
 }
 
 .social-links a:hover {
-  background: var(--signal);
-  border-color: var(--signal);
+  background: #285dc0;
+  border-color: #285dc0;
 }
 
 @media (max-width: 900px) {
@@ -685,6 +721,11 @@ button {
 
   .hero-note {
     display: none;
+  }
+
+  .hero-profile img {
+    width: 64px;
+    height: 64px;
   }
 
   .hero-index {

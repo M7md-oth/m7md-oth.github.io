@@ -125,6 +125,18 @@ export default function App() {
                 University. I focus on React interfaces and the backend,
                 database, and transaction workflows behind digital commerce.
               </p>
+              <div className="hero-profile">
+                <img
+                  src="/profile.png"
+                  alt="Mohammed Othman profile photo"
+                  width={72}
+                  height={72}
+                />
+                <div>
+                  <strong>Mohammed Othman</strong>
+                  <p>Full-stack developer</p>
+                </div>
+              </div>
               <div className="hero-actions">
                 <a className="button button-primary" href="#work">
                   View selected work
@@ -137,6 +149,7 @@ export default function App() {
               </div>
             </div>
             <aside className="hero-note" aria-label="Current focus">
+              <img src="/profile.png" alt="" className="hero-note-photo" />
               <span className="note-label">Current focus</span>
               <p>React and TypeScript interfaces, e-commerce architecture, and dependable backend workflows.</p>
               <a href="mailto:mohammedoth1232@gmail.com">
